@@ -1,12 +1,10 @@
 package com.example.onexr_vr_app
-
 import android.content.Intent
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
 
 class MainActivity : FlutterActivity() {
-
 
     private val CHANNEL = "com.onexr.vr/player"
     private val VR_REQUEST_CODE = 101
@@ -21,7 +19,6 @@ class MainActivity : FlutterActivity() {
                 if (call.method == "startVrExperience") {
 
                     pendingResult = result
-
 
                     val intent = Intent(this, VrPlayerActivity::class.java)
                     startActivityForResult(intent, VR_REQUEST_CODE)
